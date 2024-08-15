@@ -13,6 +13,14 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 
 function stringConverter(string) {
   // Your code here
+  let characterCount = {};
+
+  for (let char of string) {
+    characterCount[char] = characterCount[char] || 0;
+
+    characterCount[char]++;
+  }
+  return characterCount;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

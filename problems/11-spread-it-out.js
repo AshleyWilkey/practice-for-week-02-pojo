@@ -10,8 +10,8 @@ spreadItOut([], [1,2,3]); // => [1,2,3];
 spreadItOut(["apple", "banana"], [1,2,3]); // => ["apple", "banana", 1, 2, 3];
 ***********************************************************************/
 
-function spreadItOut(array1, array2) {
-  // Your code here
+function spreadItOut(...arrays) {
+  return arrays.flat();
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

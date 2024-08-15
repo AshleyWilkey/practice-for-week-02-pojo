@@ -28,8 +28,23 @@ let obj3 = {
 appleCounter(obj3); // => 3
 ***********************************************************************/
 
-function appleCounter(appleObj) {
-  // Your code here
+// function appleCounter(appleObj) {
+//   // Your code here
+//   let count = 0;
+//   for (let key in appleObj) {
+//     //check if key includes apple
+//     if (/apple/gi.test(key)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+function appleCounter(obj) {
+  return Object.keys(obj).reduce(
+    (acc, key) => (/apple/gi.test(key) ? ++acc : acc),
+    0
+  );
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

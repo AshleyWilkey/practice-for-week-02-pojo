@@ -12,7 +12,14 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here
+  let count = {};
+
+  for (let el of array) {
+    count[el] = count[el] || 0;
+
+    count[el]++;
+  }
+  return count;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
